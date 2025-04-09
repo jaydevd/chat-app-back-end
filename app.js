@@ -67,6 +67,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('register', (username) => {
+        console.log("user registered: ", username);
         users[username] = socket.id;
         socket.username = username;
     });
