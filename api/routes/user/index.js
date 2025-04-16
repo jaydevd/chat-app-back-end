@@ -7,10 +7,12 @@
  */
 
 const express = require('express');
-const { UserRoutes } = require('./user');
+const { AuthRoutes } = require('./auth/AuthRoutes');
+const { ChatRoutes } = require('./chat/ChatRoutes');
 
 const router = express.Router();
 
-router.use('/user', UserRoutes);
+router.use('/auth', AuthRoutes);
+router.use('/chat', ChatRoutes);
 
-module.exports = { router }
+module.exports = { UserRoutes: router }
